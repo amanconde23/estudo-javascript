@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desconstruir Objetos e Arrays</title>
+</head>
+<body>
+  <h1>Desconstruindo um objeto</h1>
+  <div id="objeto"></div>
+  <div id="array"></div>
+
+  <script>
+    // OBJETO
+    let aluno = {
+      nome: "Amanda",
+      idade: 29,
+      profissao: "Programadora",
+    }
+
+    // desconstruindo (pegando a idade e profissao)
+    let { idade } = aluno;
+    let { profissao } = aluno;
+    document.getElementById('objeto').innerHTML = `Desconstruindo objeto -> idade: ${idade}, profissão: ${profissao}`;
+
+    // criar uma nova variavel com o valor de outra variavel
+    let { nome: registro } = aluno;
+    console.log(registro);
+
+    // ARRAY
+    let linguagensDeProgramacao = ["JAVASCRIPT", "PHP", "JAVA"];
+
+    // desconstruindo (pegando duas linguagem)
+    let { 0:primeiraLinguagem, 1:segundaLinguagem } = linguagensDeProgramacao;
+    document.getElementById('array').innerHTML = `Primeira linguagem de programação: ${primeiraLinguagem}. Segunda linguagem de programação: ${segundaLinguagem}`;
+
+  </script>
+</body>
+</html>

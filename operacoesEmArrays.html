@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operações com Arrays</title>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="reduce"></div>
+  <div id="find"></div>
+
+
+  <script>
+    const lista = [1, 2, 3, 4, 5];
+    // MAP: outra forma de percorrer o array (alem dos laços de repetição)
+    const novaLista = lista.map(function(item){
+      // 5x1, 5x2...ate o ultimo elemento (5x5)
+      return item * 5;
+    });
+
+    document.getElementById('map').innerHTML = "<h1>MAP</h1>" + novaLista;
+
+    // REDUCE: percorre o array, e gera um valor único final
+    const soma = lista.reduce(function(total, proximo){
+      return total + proximo;
+    });
+
+    document.getElementById('reduce').innerHTML = "<h1>REDUCE</h1>" + soma;
+
+    // FIND: percorre o array para encontrar um único valor
+    const buscar = lista.find(function(item){
+      return item === 3;
+    });
+
+    document.getElementById('find').innerHTML = "<h1>REDUCE</h1>" + buscar;
+
+
+  </script> 
+</body>
+</html>

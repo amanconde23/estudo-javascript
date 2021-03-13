@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebStorage</title>
+</head>
+<body>
+  <h1>WebStorage</h1>
+    <p>Local Storage: salva informações no navegador do usuário. Se o usuário fechar o navegador, as informações permanecem salvas.</p>  
+    <p>Session Storage: armazena informações somente enquanto a sessão estiver ativa. Quando o usuário fecha o navegador, as informações são perdidas.</p>
+    <p>Cookies: armazena informações de navegação, qdo o usuário acessar o site novamente, essas informações estão salvas no navegador</p>
+
+    <div id="nomeNoLocalStorage"></div>
+
+  <script>
+    // salvar informações no localStorage
+    // var salvarNomeLocalStorage = localStorage.setItem("nome", "Amanda");
+
+    // pegar dados no localStorage
+    // var buscarNomeLocalStorage = localStorage.getItem("nome");
+    // console.log(buscarNomeLocalStorage);
+
+    // remover dados do localStorage
+    // localStorage.removeItem("nome");
+    // var buscarNomeLocalStorage = localStorage.getItem("nome");
+    // console.log(buscarNomeLocalStorage);
+
+    // OUTRA FORMA
+    // localStorage.nome = "Amanda";
+    // console.log(localStorage);
+
+    var nome = "";
+
+    if (typeof localStorage.nome == "undefined"){
+      localStorage.nome = prompt("Digite seu nome: ")
+    }
+    
+    var nome = localStorage.nome;
+    document.getElementById('nomeNoLocalStorage').innerHTML = "Nome no Local Storage: " + nome;
+
+    // Para salvar na SESSION STORAGE
+    // sessionStorage.nome = "Amanda";
+
+    
+  </script>
+</body>
+</html>

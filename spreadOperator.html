@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread Operator</title>
+</head>
+<body>
+  <div id="uniaoArrays"></div>
+  <div id="uniaoObjetos"></div>
+
+  <script>
+    let pares = [2, 4, 6];
+    let impares = [1,2,3];
+
+    // unir dois arrays
+    let uniaoArray = [...pares, ...impares]
+    document.getElementById('uniaoArrays').innerHTML = uniaoArray;
+
+    // objeto
+    let aluno = {
+      nome: "Amanda",
+      idade: 29
+    }
+
+    // unir com spread operator
+    let alunoNovo = {
+      ...aluno, 
+      cidade: "Guarujá",
+      ano: 2021
+    }
+
+    document.getElementById('uniaoObjetos').innerHTML = Object.values(alunoNovo);
+
+    // criando uma função
+    function cadastrarFuncionario(info){
+      let completandoCadastroFuncionario = {
+        ...info,
+        status: 1,
+        codigo: 34212
+      }
+      return completandoCadastroFuncionario;
+    }
+
+    console.log(
+      cadastrarFuncionario({
+        nome: "Amanda",
+        cidade: "Guarujá"
+      })
+    );
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novas Funções</title>
+</head>
+<body>
+  <h1>Novas Funções</h1>
+
+  <script>
+    // INCLUDES: verifica se um elemento existe no array
+    // let nomes = ["Amanda", "Daniela"];
+
+    // if (nomes.includes("Amanda")){
+    //   console.log("Amanda existe na lista")
+    // } else {
+    //   console.log("Amanda não existe na lista")
+    // }
+
+    // ENDSWITH: verifica se a string termina com o que está sendo passado
+    // let nome = "Amanda";
+    // console.log(nome.endsWith('a'));
+
+    // STARTSWITH: verifica se a string termina com o que está sendo passado
+    // console.log(nome.startsWith('b'));
+
+    // SOME: existe algum elemento do que está sendo pedido?
+    // console.log(nomes.some(nome => nome === "Amanda"));
+
+    // EVERY: todos os elementos devem corresponder a condição imposta
+    let nomes = [
+      {nome: "Amanda", idade:29},
+      {nome: "Daniela", idade:49}
+    ]
+    console.log(nomes.every(nome => nome.idade >= 40));
+    
+  </script>
+</body>
+</html>
