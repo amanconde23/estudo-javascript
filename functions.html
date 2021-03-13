@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções</title>
+</head>
+<body>
+  <div id="container1">
+    <h1>Bem vindo...</h1>
+  </div>
+  <button
+    onclick="adicionarNome()"
+  >
+    Adicionar nome na tela
+  </button>
+
+  <!-- Recebendo parametros -->
+  <div id="container2">
+    <h1>Nome, sobrenome e idade: </h1>
+  </div>
+  <button
+    onclick="adicionarIdade('Amanda', 'Martinez')"
+  >
+    Recebendo parâmetros
+  </button>
+
+
+  <script>
+    function adicionarNome(){
+      var area = document.getElementById('container1');
+      var nome = prompt('Digite seu nome');
+
+      if(nome == "" || nome == null){
+        alert('Digite novamente o seu nome: ')
+        area.innerHTML = '<h1>Bem vindo...</h1>'
+      }else{
+        area.innerHTML = 'Bem vindo: ' + nome;
+      }
+    }
+
+    function adicionarIdade(nome, sobrenome){
+      var area = document.getElementById('container2');
+      var idade = prompt('Digite a sua idade');
+      
+      area.innerHTML = 'Nome, sobrenome e idade: ' + nome + " " + sobrenome + ", " + idade + " anos";
+    }
+  </script>
+</body>
+</html>
